@@ -42,15 +42,17 @@
   font-size: 2.6rem;
 }
 
-
 :root {
-  --ifm-color-primary: #865DFF;
+  --ifm-color-primary: #000000;
+  --color-purple: #635bff;
+  /*
   --ifm-color-primary-dark: #6949ca;
   --ifm-color-primary-darker: #4e3697;
   --ifm-color-primary-darkest: #352467;
   --ifm-color-primary-light: #9370fa;
   --ifm-color-primary-lighter: #ad94fb;
   --ifm-color-primary-lightest: #c8b7fa;
+  */
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'nt-dapper', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif;
@@ -59,19 +61,34 @@
   --ifm-navbar-item-padding-horizontal: 20px;
   --ifm-navbar-height: 80px;
 
-  --ifm-link-decoration: none;
+  /*
+  --ifm-link-decoration: bold;
   --ifm-link-hover-decoration: none;
-  
+  */
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #865DFF;
+  --ifm-color-primary: #e8e8e8;
+  /*
   --ifm-color-primary-dark: #6949ca;
   --ifm-color-primary-darker: #4e3697;
   --ifm-color-primary-darkest: #352467;
   --ifm-color-primary-light: #9370fa;
   --ifm-color-primary-lighter: #ad94fb;
   --ifm-color-primary-lightest: #c8b7fa;
+  */
+}
+
+:link {
+  --ifm-link-decoration: none;
+  --ifm-link-hover-decoration: none;
+  --ifm-link-hover-color: var(--color-purple);
+  -webkit-transition: 0.075s all ease-in-out;
+  transition: 0.075s all ease-in-out;
+}
+
+li a:hover {
+  border-color: var(--color-purple);
 }
 
 .docusaurus-highlight-code-line {
@@ -91,7 +108,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 
 .blogPostTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogPostItem-styles-module
   a:hover {
-  color: var(--ifm-color-primary-dark);
+  color: var(--color-purple);
 }
 
 .navbar__brand {
