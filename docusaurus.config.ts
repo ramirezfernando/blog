@@ -55,7 +55,7 @@ const config: Config = {
       title: "Fernando's Blog",
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/gopher.png',
       },
       items: [
         {
@@ -70,7 +70,7 @@ const config: Config = {
       content: '⭐️ Star to help support me <a target="_blank" rel="noopener noreferrer" href="https://github.com/ramirezfernando/blog">GitHub</a>',
       backgroundColor: '#fafbfc',
       textColor: '#091E42',
-      isCloseable: true,
+      isCloseable: false,
     }, 
     footer: {
       style: 'light',
