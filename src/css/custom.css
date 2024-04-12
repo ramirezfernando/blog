@@ -44,13 +44,13 @@
 
 
 :root {
-  --ifm-color-primary: #827397;
-  --ifm-color-primary-dark: #4D4C7D;
-  --ifm-color-primary-darker: #4D4C7D;
-  --ifm-color-primary-darkest: #363062;
-  --ifm-color-primary-light: #E9D5DA;
-  --ifm-color-primary-lighter: #E9D5DA;
-  --ifm-color-primary-lightest: #ffe5f1;
+  --ifm-color-primary: #865DFF;
+  --ifm-color-primary-dark: #6949ca;
+  --ifm-color-primary-darker: #4e3697;
+  --ifm-color-primary-darkest: #352467;
+  --ifm-color-primary-light: #9370fa;
+  --ifm-color-primary-lighter: #ad94fb;
+  --ifm-color-primary-lightest: #c8b7fa;
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'nt-dapper', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif;
@@ -58,8 +58,20 @@
   --ifm-heading-font-weight: 900;
   --ifm-navbar-item-padding-horizontal: 20px;
   --ifm-navbar-height: 80px;
+
   --ifm-link-decoration: none;
   --ifm-link-hover-decoration: none;
+  
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #865DFF;
+  --ifm-color-primary-dark: #6949ca;
+  --ifm-color-primary-darker: #4e3697;
+  --ifm-color-primary-darkest: #352467;
+  --ifm-color-primary-light: #9370fa;
+  --ifm-color-primary-lighter: #ad94fb;
+  --ifm-color-primary-lightest: #c8b7fa;
 }
 
 .docusaurus-highlight-code-line {
@@ -70,7 +82,7 @@
 }
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(213, 174, 174, 0.3);
 }
 
 .blogPostTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogPostItem-styles-module a {
@@ -79,7 +91,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 
 .blogPostTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogPostItem-styles-module
   a:hover {
-  color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary-dark);
 }
 
 .navbar__brand {

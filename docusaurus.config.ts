@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Blog',
   tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/gopher.png',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
