@@ -3,6 +3,7 @@ slug: new-grad-swe-job-hunt
 title: My 2024 New Grad SWE Job Hunt
 description: How I managed to land 3 new grad SWE job offers in the most competitive year yet.
 authors: [fearzyn]
+enableComments: true
 ---
 
 ## Overview
@@ -91,3 +92,5 @@ I also recommend keeping track of your leetcode solution - I used Notion for thi
 Lastly, maintain a positive attitude throughout the job hunt - it's a long and grueling process but it's worth it in the end.
 
 Good luck!
+
+<br />
