@@ -3,20 +3,20 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Blog',
-  tagline: 'Dinosaurs are cool',
+  title: "Fernando's Blog",
+  tagline: 'Welcome to my blog! 🚀',
   favicon: 'img/gopher.png',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://blog.fernandoramirez.me',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'ramirezfernando', // Usually your GitHub org/user name.
+  projectName: 'blog.fernandoramirez.me', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -67,7 +67,7 @@ const config: Config = {
     },
     announcementBar: {
       id: 'support_us',
-      content: '⭐️ Star to help support me <a target="_blank" rel="noopener noreferrer" href="https://github.com/ramirezfernando/blog">GitHub</a>',
+      content: '⭐️ If this website helped you, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/ramirezfernando/blog">GitHub</a>!',
       backgroundColor: '#fafbfc',
       textColor: '#091E42',
       isCloseable: false,

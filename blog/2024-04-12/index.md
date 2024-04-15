@@ -1,6 +1,7 @@
 ---
 slug: welcome
 title: Welcome
+description: My first blog post on this website.
 authors: [fearzyn]
 ---
 
