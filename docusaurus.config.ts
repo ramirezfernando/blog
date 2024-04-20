@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: "Fernando's Blog",
+  title: "blog.fernandoramirez.me",
   tagline: 'Welcome to my blog! 🚀',
   favicon: 'img/gopher.png',
 
@@ -52,7 +52,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: "Fernando's Blog",
+      title: "blog.fernandoramirez.me",
       logo: {
         alt: 'My Site Logo',
         src: 'img/gopher.png',
@@ -122,6 +122,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['makefile'],
     },
   } satisfies Preset.ThemeConfig,
 };
