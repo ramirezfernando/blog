@@ -57,6 +57,9 @@ Keep in mind that these commands are specific to macOS. If you're on Windows or 
 
 Now all I have to do is run `make resume` in my terminal and my resume is generated in both PDF and PNG format. I then commit and push my changes to GitHub. I do this every time I update my resume. GitHub provides a link to the raw version of the PDF and PNG of my resume which I can use to share on my website. Now I can have my website button lead to the [raw PNG version of my resume](https://raw.githubusercontent.com/ramirezfernando/resume/main/Fernando_Ramirez_Resume.png) (my link will remain the same even after I edit my resume).
 
+Also it's worth mentioning that now that my resume PDF and PNG are on GitHub, I can easily compare my resume changes on GitHub as such:
+![GitHub Resume Compare](github-resume-compare.png "GitHub Resume Compare")
+
 ## Conclusion
 Using GitHub to write my resume has been a game changer for me. I'm now able to keep track of my entire resume edit history and automate the process of sharing my resume on my website. I edit my resume in VSCode and use a Makefile to generate a PDF and PNG of my resume. I then commit and push my changes to GitHub where I can use a link of the raw PNG version of my resume to share on my website. With this, I'm able to have my most up to date resume on my website without having to manually update it. I'm very content with my current setup and I don't see myself going back to Overleaf anytime soon. Let me know if you have any questions or suggestions on how I can improve my resume sharing process.
 
