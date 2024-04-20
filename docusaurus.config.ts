@@ -67,9 +67,8 @@ const config: Config = {
     },
     announcementBar: {
       id: 'support_us',
-      content: '⭐️ If this website helped you, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/ramirezfernando/blog">GitHub</a>!',
-      backgroundColor: '#fafbfc',
-      textColor: '#091E42',
+      content: `If this website helped you, give it a ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/ramirezfernando/blog">GitHub</a>!`,
+      backgroundColor: '#7063f3',
       isCloseable: false,
     }, 
     footer: {
