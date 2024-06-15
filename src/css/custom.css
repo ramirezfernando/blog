@@ -43,6 +43,11 @@ html[data-theme='dark'] {
   --ifm-color-primary-lightest: #ffffff;
 }
 
+a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .navbar__items {
   font-size: 0.9rem;
 }
