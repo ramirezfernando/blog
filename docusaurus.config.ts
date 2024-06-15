@@ -63,14 +63,21 @@ const config: Config = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          href: 'https://linkedin.com/in/fndo',
+          label: 'LinkedIn',
+          position: 'right',
+        },
       ],
     },
+    /*
     announcementBar: {
       id: 'support_us',
       content: `If this website helped you, give it a ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/ramirezfernando/blog">GitHub</a>!`,
       backgroundColor: '#7063f3',
       isCloseable: false,
     }, 
+    */
     footer: {
       style: 'light',
       links: [
