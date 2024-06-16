@@ -11,16 +11,15 @@ Thread pools are one of several multithreading design patterns that can be used 
 <!-- truncate -->
 
 ## Background
-Multithreading ["is the ability of a central processing unit (CPU) (or a single core in a multi-core processor) to provide multiple threads of execution."](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)) Multithreading can be useful when a program is performing a task that can be broken down into smaller tasks that can be executed concurrently. An example of this is in one of my recent projects - [Ube](https://github.com/ramirezfernando/ube), my program counts the lines of code in each file starting from a specified directory or file. This task can be broken down into smaller tasks where each thread counts the lines of code in a file (I actually implemented this which you can learn more about [here](https://github.com/ramirezfernando/ube/releases/tag/v2.0.0)!)
+Multithreading ["is the ability of a central processing unit (CPU) (or a single core in a multi-core processor) to provide multiple threads of execution."](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)) Multithreading can be useful when a program is performing a task that can be broken down into smaller tasks that can be executed concurrently. An example of this is in one of my recent projects, [Ube](https://github.com/ramirezfernando/ube), my program counts the lines of code in each file starting from a specified directory or file. This task can be broken down into smaller tasks where each thread counts the lines of code in a file, I actually implemented this which you can learn more about [here](https://github.com/ramirezfernando/ube/releases/tag/v2.0.0)!
 
 ## What is a Thread Pool?
-A thread pool is a collection of threads that are created once and can be reused multiple times. The benefit to this is by creating once, you avoid the expensive operation of creating and destroying threads for each task (i.e. allocating/de-allocating memory, etc.). A task can be passed into the thread pool which internally is a queue data structure (sometimes referred to as a task or blocking queue) - which follows first-in first-out (FIFO). From there, any idle thread can pop the first task from the queue and perform the task.
+A thread pool is a collection of threads that are created once and can be reused multiple times. The benefit to this is by creating once, you avoid the expensive operation of creating and destroying threads for each task (i.e. allocating/de-allocating memory, etc.). A task can be passed into the thread pool which internally is a [queue](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)), that's sometimes referred to as a task queue or blocking queue. From there, any idle thread can pop the first task from the queue and perform the task.
 
 ![Thread Pool Diagram](thread-pool.png)
 
-
 ## Getting Started With Thread Pools in C++!
-For this example, I'll be using [BS::thread_pool: a fast, lightweight, and easy-to-use C++17 thread pool library](https://github.com/bshoshany/thread-pool). One of the pros to using this library is that by default, the number of threads in the pool is equal to the maximum number of threads that the hardware can run in parallel - This is usually determined by the number of cores in the CPU. Any more threads than the hardware can handle will not improve performance, and in fact will most likely hinder it. 
+For this example, I'll be using [BS::thread_pool: a fast, lightweight, and easy-to-use C++17 thread pool library](https://github.com/bshoshany/thread-pool). One of the pros to using this library is that by default, the number of threads in the pool is equal to the maximum number of threads that the hardware can run in parallel, This is usually determined by the number of cores in the CPU. Any more threads than the hardware can handle will not improve performance, and in fact will most likely hinder it. 
 
 ```cpp showLineNumbers
 #include "BS_thread_pool.hpp"
@@ -91,11 +90,11 @@ All requests handled.
 
 :::note
 
-The output looks a little messy, but that's likely due to the way the console handles output from multiple threads.
+The output looks a little weird, but that's likely due to the way the console handles output from multiple threads. Also, some numbers aren't on a newline which makes them look like numbers they're not i.e. "56" is "5" and "6" on the same line.
 
 :::
 
-Let's walkthrough the steps of my program! After initializing my thread pool and [futures](https://en.cppreference.com/w/cpp/thread/future) vector, I use a for loop to enqueue 20 tasks to the task queue. As soon as I submit a task to the thread pool, one of my 10 threads will pop from the task queue and process my task - which in this case, printing the task number and simulating data processing time by sleeping for 1 second. Once the task is completed, the thread will be available to process another task. After all tasks are completed, I wait for all the futures to complete and print "All requests handled."
+Let's walkthrough the steps of my program. After initializing my thread pool and [futures](https://en.cppreference.com/w/cpp/thread/future) vector, I use a for loop to enqueue 20 tasks to the task queue. As soon as I submit a task to the thread pool, one of my 10 threads will pop from the task queue and process my task (printing the task number and sleeping for 1 second to simulate data processing time). Once the task is completed, the thread will be available to process another task. After all tasks are completed, I wait for all the futures to complete and print "All requests handled."
 
 ## Final Thoughts
 Thread pools remove the performance overhead of having to create and destroy threads for each task. By initializing threads once, you'll be able to reuse existing threads multiple times, making your concurrent programs more efficient ⚡️
