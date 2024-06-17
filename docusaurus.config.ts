@@ -63,6 +63,11 @@ const config: Config = {
       },
       items: [
         {
+          href: 'https://www.fernandoramirez.me/',
+          label: 'Portfolio',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/ramirezfernando',
           label: 'GitHub',
           position: 'right',
